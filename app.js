@@ -84,7 +84,7 @@ const app = express()
 const port = 3000
 
 app.use(express.static('public'));
-app.use(express.static('HTML'));
+// app.use(express.static('HTML'));
 app.use(morgan('tiny'))
 app.get('/home', function (req, res){
     res.status(200).sendFile('./HTML/index.html',{root:__dirname})
@@ -112,5 +112,5 @@ app.listen(port, ()=>{
 })
 
 // EXERCICE FAIRE UNE NAVBARRE QUI VA NOUS PERMETTRE DE NAVIGUER ENTRE TOUTES LES PAGES
-// pour la page home: c'est une ressource statique donc on met comme lien: "/"
+// pour la page home: on met comme lien: "/"
 
